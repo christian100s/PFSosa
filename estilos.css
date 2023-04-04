@@ -1,0 +1,324 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* --- HEADER ---*/
+
+.contenedorHeader{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    height: 10%;
+}
+
+.ch1{
+    margin: 3% 3% 3% 15%;
+}
+
+.ch2{
+    margin: 5% 10% 0 0;
+}
+
+header div ul{
+    margin: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header div ul li{
+    float: right;
+    padding: 0 10px 0 10px;
+}
+
+header ul li a:hover{
+    color: goldenrod;
+}
+
+header button svg:hover{
+    color: rgb(228, 94, 16);
+    width: 25px;
+    height: 25px;
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    height: 9%;
+    background-color: white;
+}
+
+.c1{
+    margin-top: 2%;
+    background-color: white;
+    display: flex;
+    justify-content: left;
+}
+
+.c2{
+    display: flex;
+    justify-content: center;
+}
+
+.c3{
+
+    list-style: none;
+    padding-top: 4%;
+    display: flex;
+    justify-content: right;
+}
+
+
+/* --- Tamaño imagenes slides "Conocenos" ---*/
+
+.imagenTrayectoria{
+    height: 90%; 
+    width: 90%;
+    margin: 2% 2% 3% 5%;
+}
+
+.navbar-logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 5%;
+    height: 5%;
+}
+
+.navbar-logo img{
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+/*--- FOOTER---*/
+
+.iconos{
+    margin: 5px;
+}
+
+.footContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 25% 10%;
+    width: 100%;
+    height: 20%;
+    background-color: lightgray;
+    border-top: 3px double;
+}
+
+.fc1{
+    display: flex;
+    justify-content: center;
+}
+
+.fc1 h5{
+    text-align: center;
+    padding-top: 1%;
+}
+
+.fc2{
+    display: flex;
+    justify-content: center;
+}
+
+.fc3 h6{
+    text-align: center;
+}
+
+footer a svg:hover{
+    width: 80%;
+    height: 80%;
+}
+
+/*--- Catalogo (Todos componentes del main) ---*/
+
+.contenedorCarta{
+    margin-top: 3%;
+    margin-right: 12%;
+    margin-left: 12%;
+    margin-bottom: 3%;
+}
+
+.carta{
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.contenedorCartalinea{
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+
+/*--- CONOCENOS ---*/
+
+.caja{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+}
+
+.caja1{
+    border-top: groove;
+    margin-left: 10%;
+}
+
+.caja2{
+    border-top: groove;
+}
+
+.caja3{
+    border-top: groove;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+.caja4{
+    border-top: groove;
+    margin-top: 7%;
+}
+
+.caja5{
+    border-top: groove;
+    margin-top: 7%;
+    margin-left: 10%;
+}
+
+.caja6{
+    border-top: groove;
+    margin-top: 7%;
+}
+
+p{
+    text-align: justify;
+}
+
+h2{
+    text-align: center;
+}
+
+/*--- UBICACION ---*/
+
+.contenidoUbicacion{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    width: 100%;
+    height: 69%;
+    margin-top: 1%;
+
+}
+
+.cajaUbicacion1{
+    border-top: groove;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.cajaUbicacion1 img{
+    width: 80%;
+    height: 60%;
+    padding-top: 10%;
+}
+
+
+.cajaUbicacion2{
+    padding-top: 10%;
+    border-top: groove;
+}
+
+/*--- CONTACTO ---*/
+
+.contacto{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    width: 100%;
+    height: 100%;
+}
+
+.contacto1{
+    border-top: 3px groove;
+    margin-top: 3%;
+    padding-top: 3%;
+    margin-left: 10%;
+}
+
+.contacto2{
+    border-top: 3px groove;
+    margin-top: 3%;
+    margin-right: 10%;
+    padding-top: 3%;
+    padding-right: 10%;
+}
+
+
+/*MEDIA QUERIE "MOBILE VIEW"*/
+
+@media only screen and (max-width:480px) {
+    .caja{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .caja1{
+        border-top: groove;
+        margin-right: 10%;
+    }
+    
+    .caja2{
+        border-top: groove;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .caja3{
+        border-top: groove;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .caja4{
+        border-top: groove;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .caja5{
+        border-top: groove;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .caja6{
+        border-top: groove;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .contenedorHeader{
+        margin-bottom: 10%;
+    }
+
+    .contenidoUbicacion{
+        grid-template-columns: repeat(1, 10px);
+        grid-template-rows: repeat(1, 1fr);
+    }
+
+    header ul li a:hover{
+        color: goldenrod;
+    }
+}
+
+@media only screen and (max-width:305px) {
+    .contenedorHeader{
+        margin-bottom: 50px;
+    }
+
+    .contenidoUbicacion{
+        margin-bottom: 100px;
+        overflow: hidden;
+    }
+}
