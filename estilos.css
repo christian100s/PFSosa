@@ -222,10 +222,32 @@ h2 {
   border-top: groove;
 }
 
-/*--- CONTACTO ---*/
+/*--- CONTENIDO CONTACTO ---*/
 .complemento {
   padding-top: 5%;
   padding-bottom: 10%;
+}
+
+/*--- CONTENIDO CONTACTO ---*/
+.contacto {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  width: 100%;
+  height: 69%;
+  margin-top: 1%;
+  margin-bottom: 5%;
+}
+
+.contacto1 {
+  border-top: groove;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+}
+
+.contacto2 {
+  padding-top: 5%;
+  border-top: groove;
 }
 
 /*MEDIA QUERIE "MOBILE VIEW"*/
@@ -288,6 +310,27 @@ h2 {
   }
   .contenido {
     margin-bottom: 5%;
+  }
+  .contacto {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 30%;
+  }
+  .contacto1 {
+    border-top: groove;
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .contacto1 img {
+    width: 100%;
+    height: 80%;
+  }
+  .contacto2 {
+    padding-top: 10%;
+    border-top: groove;
+    margin-left: 10%;
+    margin-right: 10%;
   }
   header ul li a:hover {
     color: goldenrod;
