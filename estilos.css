@@ -1,7 +1,7 @@
 @charset "UTF-8";
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 /* --- HEADER ---*/
@@ -22,7 +22,7 @@
 
 header div ul {
   margin: 0;
-  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -73,8 +73,8 @@ header button svg:hover {
 /* --- Tamaño imagenes slides "Conocenos" ---*/
 .imagenTrayectoria {
   height: 90%;
-  width: 90%;
   margin: 2% 2% 3% 5%;
+  width: 90%;
 }
 
 .navbar-logo {
