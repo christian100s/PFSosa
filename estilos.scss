@@ -1,3 +1,5 @@
+/*--- METODOS ---*/
+
 @mixin medida-0(){
     margin: 0;
     padding: 0;
@@ -12,11 +14,25 @@
     margin-left: 10%;
 }
 
+@mixin animacion-borde(){
+    animation-name: borde;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+/*--- MAPAS ---*/
+
 $colores: (
     hover: goldenrod,
     carritoHover: rgb(228, 94, 16),
     blanco: white,
-    grisClaro: lightgray
+    grisClaro: lightgray,
+    grisIntermedio1:rgb(163, 160, 160),
+    grisIntermedio2:rgb(119, 119, 119),
+    grisIntermedio3:rgb(85, 85, 85),
+    grisIntermedio4:rgb(54, 54, 54),
+    negro: black
 );
 
 $bordes:(
@@ -54,6 +70,11 @@ header div ul{
 header div ul li{
     float: right;
     padding: 0 10px 0 10px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color: map-get($colores, $key:negro );
 }
 
 header ul li a:hover{
@@ -96,7 +117,7 @@ header button svg:hover{
     justify-content: right;
 }
 
-/* --- Tamaño imagenes slides "Conocenos" ---*/
+/* --- TAMAÑO IMAGENES SLIDES "CONOCENOS" ---*/
 
 .imagenTrayectoria{
     height: 90%; 
@@ -126,11 +147,42 @@ header button svg:hover{
 .footContainer{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 30% 25% 10%;
+    grid-template-rows: 30% 30% 25% 10%;
     @include tamano(100%);
     height: 20%;
     background-color: map-get($colores, $key:grisClaro );
     border-top: 3px map-get($bordes , $key:double );
+}
+
+.fcCaja{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    
+}
+
+footer div ul{
+    @include medida-0;
+    list-style: none;
+}
+
+footer div ul li{
+    float: right;
+    padding: 0 10px 0 10px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: map-get($colores, $key:negro );
+}
+
+footer ul li a:hover{
+    color: map-get($colores, $key:hover );
+}
+
+.linea{
+    border-left: 1px map-get($bordes, $key:solid ) map-get($colores, $key:negro );
+    padding: 0 20px 0 20px;
 }
 
 .fc1{
@@ -157,7 +209,7 @@ footer a svg:hover{
     height: 80%;
 }
 
-/*--- Catalogo (Todos componentes del main) ---*/
+/*--- CATALOGO (TODOS COMPONENTES DEL MAIN) ---*/
 
 .contenedorCarta{
     margin: 3% 12% 3% 12%;
@@ -185,30 +237,37 @@ footer a svg:hover{
 .caja1{
     border-top: map-get($bordes, $key:groove );
     margin-left: 10%;
+    @include animacion-borde();
 }
 
 .caja2{
     border-top: map-get($bordes, $key:groove );
+    animation-name: borde;
+    @include animacion-borde();
 }
 
 .caja3{
     border-top: map-get($bordes, $key:groove );
     margin: 7% 0 0 10%;
+    @include animacion-borde();
 }
 
 .caja4{
     border-top: map-get($bordes, $key:groove );
     margin-top: 7%;
+    @include animacion-borde();
 }
 
 .caja5{
     border-top: map-get($bordes, $key:groove );
     margin: 7% 0 0 10%;
+    @include animacion-borde();
 }
 
 .caja6{
     border-top: map-get($bordes, $key:groove );
     margin-top: 7%;
+    @include animacion-borde();
 }
 
 p{
@@ -235,6 +294,7 @@ h2{
     display: flex;
     justify-content: center;
     margin-left: 10%;
+    @include animacion-borde();
 }
 
 .cajaUbicacion1 img{
@@ -246,6 +306,7 @@ h2{
 .cajaUbicacion2{
     padding-top: 10%;
     border-top: map-get($bordes, $key:groove );
+    @include animacion-borde();
 }
 
 /*--- CONTENIDO CONTACTO ---*/
@@ -253,8 +314,6 @@ h2{
 .complemento{
     padding: 5% 0 10% 0;
 }
-
-/*--- CONTENIDO CONTACTO ---*/
 
 .contacto{
     display: grid;
@@ -269,14 +328,40 @@ h2{
     display: flex;
     justify-content: center;
     margin-left: 10%;
+    @include animacion-borde();
 }
 
 .contacto2{
     padding-top: 5%;
     border-top: map-get($bordes, $key:groove );
+    @include animacion-borde();
 }
 
-/*MEDIA QUERIE "MOBILE VIEW"*/
+
+/*--- ANIMACIÓN BORDES DE CAJA1 A CAJA6 ---*/
+
+@keyframes borde{
+    0%{
+        border-top: map-get($colores, $key:grisClaro ) map-get($bordes, $key:groove );
+    }
+    20%{
+        border-top: map-get($colores, $key:grisIntermedio1 ) map-get($bordes, $key:groove );
+    }
+    40%{
+        border-top: map-get($colores, $key:grisIntermedio2 ) map-get($bordes, $key:groove );
+    }
+    60%{
+        border-top: map-get($colores, $key:grisIntermedio3 ) map-get($bordes, $key:groove );
+    }
+    80%{
+        border-top: map-get($colores, $key:grisIntermedio4 ) map-get($bordes, $key:groove );
+    }
+    100%{
+        border-top: map-get($colores, $key:negro ) map-get($bordes, $key:groove );
+    }
+}
+
+/*--- MEDIA QUERIE "MOBILE VIEW" ---*/
 
 @media only screen and (max-width:480px) {
     .caja{
